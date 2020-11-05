@@ -48,6 +48,22 @@ public class MarkovRunner {
 		printOut(text);
     }
     
+    public void runMarkov() { 
+        FileResource fr = new FileResource("src/data/confucius.txt"); 
+        String st = fr.asString(); 
+        st = st.replace('\n', ' '); 
+        MarkovWordOne markovWord = new MarkovWordOne(); 
+        runModel(markovWord, st, 120, 139); 
+    } 
+    
+    public void runMarkovTwo() {
+        FileResource fr = new FileResource("src/data/confucius.txt"); 
+        String st = fr.asString(); 
+        st = st.replace('\n', ' '); 
+        MarkovWordTwo markovWordTwo = new MarkovWordTwo(); 
+        runModel(markovWordTwo, st, 100, 832); 
+    }
+
 	private void printOut(String s){
 		String[] words = s.split("\\s+");
 		int psize = 0;
@@ -69,5 +85,7 @@ public class MarkovRunner {
 		//obj.runMarkovOne();
 		//obj.runMarkovFour();
 		obj.runMarkovModel();
+		//obj.runMarkov();
+    	//obj.runMarkovTwo();
 	}
 }
