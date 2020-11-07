@@ -89,7 +89,7 @@ public class FirstRatings {
 		}
 		
 		for (String raterID : raterData.keySet()) {
-			Rater obj = new Rater(raterID);
+			Rater obj = new EfficientRater(raterID);
 			for (Rating rating : raterData.get(raterID))
 				obj.addRating(rating.getItem(), rating.getValue());
 			raters.add(obj);
@@ -148,7 +148,7 @@ public class FirstRatings {
 	
 	public static void main(String[] args) {
 		FirstRatings obj = new FirstRatings();
-		//obj.testLoadMovies();
+		obj.testLoadMovies();
 		obj.testLoadRaters();
 	}
 }

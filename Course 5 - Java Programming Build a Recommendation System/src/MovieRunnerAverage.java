@@ -23,6 +23,6 @@ public class MovieRunnerAverage {
 	public static void main(String[] args) {
 		MovieRunnerAverage obj = new MovieRunnerAverage();
 		obj.printAverageRatings();
-		//obj.getAverageRatingOneMovie();
+		obj.getAverageRatingOneMovie();
 	}
 }
